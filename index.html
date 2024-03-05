@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: pink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Source Code Pro;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .cringe {
+            text-align: center;
+        }
+
+        .cringe img {
+            width: 500px;
+            height: 500px;
+            border-radius: 90px;
+        }
+
+        .cringe button {
+            margin: 10px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="cringe">
+        <img src="first.jpg" id="change">
+        <h1 id="update">Wanna go out?</h1>
+        <button onclick="DontClick()" id="no">No</button>
+        <button onclick="Click()">Yes</button>
+    </div>
+</body>
+<script> 
+ 
+ function DontClick(){
+    document.getElementById("update").innerHTML = "Are you sure about that? cmon";
+    document.getElementById("change").src = "crying.jpg";
+    document.getElementById("no").onclick = Again;
+ }
+
+ function Again(){
+    document.getElementById("update").innerHTML = "You really dont want me?:(😔😔";
+    document.getElementById("change").src = "second.jpg";
+    document.getElementById("no").onclick = Againone;
+ }
+
+ function Againone(){
+    document.getElementById("update").innerHTML = "This is your last chance please go out with me😔💔💔💔 (Ignore the light skin guy:))";
+    document.getElementById("change").src = "1.jpg";
+    document.getElementById("no").onclick = timestwo;
+ }
+ function timestwo(){
+    document.getElementById("update").innerHTML = "Nuh uh i wont give up this will not going to end if you keep pressing no:( 🥺🥺🥺🥺";
+    document.getElementById("change").src = "2.jpg";
+    document.getElementById("no").onclick = DontClick;
+ }
+
+ function Click(){
+    document.getElementById("update").innerHTML = "Thats right dating me is like winning a lottery ticker youre lucky fr🙂🙂🙂🙂🙂";
+    document.getElementById("change").src = "last.gif";
+ }
+  </script>
+</html>
